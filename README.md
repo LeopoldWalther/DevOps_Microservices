@@ -1,3 +1,26 @@
+# How To
+
+
+## Start Cloud9 Environment
+1) Start Cloud9 Environment
+
+## Connect Github Repo to Cloud9 Environment 
+2) `$ ssh-keygen -t rsa`
+3) `$ cat /home/ec2-user/.ssh/id_rsa.pub` --> ssh-rsa AAAAB3NzaC1yc2EAAAAnG...
+4) Create SSH key in Github with rsa
+5) clone with ssh in Cloud9 `$ git clone git@github.com:LeopoldWalther/containerize-existing-app.git`
+6) cd into project
+8) Firt commit ``
+
+## Initialize Python Environment
+7) Use Makefile commands: `$ make setup`
+8) Activate Python Virtual Environment `$ source ~/.pia-aws/bin/activate`
+9) Install required packages `$ make install`install
+10) 
+
+
+
+
 ## Cloud DevOps ND - C4- Microservices at Scale using AWS & Kubernetes - Supporting Material and Project Starter
 
 This repository is associated with Cloud DevOps ND - Course 04 - Microservices at Scale using AWS & Kubernetes. In here, you'll find:
