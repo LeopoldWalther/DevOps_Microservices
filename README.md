@@ -10,13 +10,24 @@
 4) Create SSH key in Github with rsa
 5) clone with ssh in Cloud9 `$ git clone git@github.com:LeopoldWalther/containerize-existing-app.git`
 6) cd into project
-8) Firt commit ``
+8) Before first commit `git config --global user.name "Leopold Walther"` 
+9) `git config --global user.email Leopold.Walther@gmail.com`
+10) If already committed before `git commit --amend --reset-author`
+
 
 ## Initialize Python Environment
 7) Use Makefile commands: `$ make setup`
-8) Activate Python Virtual Environment `$ source ~/.pia-aws/bin/activate`
-9) Install required packages `$ make install`install
-10) 
+8) Activate Python Virtual Environment `$ source ~/.pia-aws/bin/activate`, deactivate with `deactivate`
+9) Add Python Virtual Environment activation to .bashrc `pwd` --> ~/environment/DevOps_Microservices/Lesson-3-Containerization 
+10) `vim ~/.bashrc` --> add at the end `#alias alias pia-aws="cd ~/environment/DevOps_Microservices/Lesson-3-Containerization && source ~/.pia-aws/bin/activate"`activate
+11) Make shell aware of alias `source ~/.bashrc`
+12) Use alias `pia-aws` or search for aliases `alias`
+13) Install required packages `$ make install`install
+
+## Create Docker Image
+14) Build docker image locally `docker build --tag=api .`
+15) Verify tha docker image "api" is in local build directory `docker image ls`
+16) Run docker image locally and connect port 5001 to 8000 `docker run -p 8000:5001 api` or  `docker run -p 8000:5001 -it --rm --name my-running-app api`
 
 
 
